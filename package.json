@@ -1,0 +1,26 @@
+{
+  "name": "dm-react-components-library",
+  "version": "0.0.1",
+  "description": "My react library full of handfull components",
+  "main": "index.js",
+  "scripts": {
+    "start": "styleguidist server"
+  },
+  "author": "DMPatod",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.10.2",
+    "@babel/preset-env": "^7.10.2",
+    "@babel/preset-react": "^7.10.1",
+    "babel-loader": "^8.1.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-styleguidist": "^11.0.8",
+    "webpack": "^4.43.0"
+  }
+}
