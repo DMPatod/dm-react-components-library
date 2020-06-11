@@ -1,12 +1,13 @@
 {
   "name": "dm-react-components-library",
-  "version": "0.0.3",
+  "version": "0.0.6",
   "description": "My react library full of handfull components",
   "author": "DMPatod",
   "license": "MIT",
-  "main": "src/index.js",
+  "main": "lib/index.js",
   "scripts": {
-    "start": "styleguidist server"
+    "start": "styleguidist server",
+    "build": "rollup -c"
   },
   "test": "jest",
   "peerDependencies": {
@@ -30,6 +31,12 @@
     "react-dom": "^16.13.1",
     "react-icons": "^3.10.0",
     "react-styleguidist": "^11.0.8",
+    "rollup": "^2.15.0",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-peer-deps-external": "^2.2.2",
+    "rollup-plugin-uglify": "^6.0.4",
     "style-loader": "^1.2.1",
     "webpack": "^4.43.0"
   }
