@@ -2,12 +2,13 @@
   "name": "dm-react-components-library",
   "version": "0.0.3",
   "description": "My react library full of handfull components",
-  "main": "index.js",
+  "author": "DMPatod",
+  "license": "MIT",
+  "main": "src/index.js",
   "scripts": {
     "start": "styleguidist server"
   },
-  "author": "DMPatod",
-  "license": "MIT",
+  "test": "jest",
   "peerDependencies": {
     "bootstrap": "^4.5.0",
     "react": "^16.13.1",
@@ -22,6 +23,7 @@
     "babel-loader": "^8.1.0",
     "bootstrap": "^4.5.0",
     "css-loader": "^3.5.3",
+    "jest": "^26.0.1",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-bootstrap": "^1.0.1",
