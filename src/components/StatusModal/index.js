@@ -1,7 +1,8 @@
 import React from "react";
 import { Modal, Row, Col, Button } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { BsFillExclamationCircleFill, BsCheckCircle } from "react-icons/bs";
 import Line from "../Line";
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 const StatusModal = (props) => {
   const {
@@ -11,15 +12,29 @@ const StatusModal = (props) => {
 
   return (
     <Modal show={appState.status !== undefined} size="lg">
-      <Modal.Header>
-        {appState.status ? "Good Message" : "Bad Message"}
+      <Modal.Header style={{justifyContent: "center"}}>
+        {appState.status ? <h2>Parabens</h2> : <h2>Atenção</h2>}
       </Modal.Header>
       <Modal.Body>
         <Row>
-          <Col>{appState.status ? "Good Icon" : "Bad Icon"}</Col>
+          <div
+            style={{
+              padding: 10,
+              marginRight: 5,
+              borderRight: "1px solid rgba(0, 0, 0, 0.2)",
+            }}
+          >
+            {appState.status ? (
+              <BsCheckCircle color="green" size={150} />
+            ) : (
+              <BsFillExclamationCircleFill color="red" size={150} />
+            )}
+          </div>
           <Col>
             <Row>
-              <Col>Messages</Col>
+              <Col>
+                <h4>Messages</h4>
+              </Col>
               <Line />
             </Row>
             <Row>
@@ -31,7 +46,7 @@ const StatusModal = (props) => {
               {process.env.NODE_ENV !== "production" &&
                 appState.errors.map((err, index) => (
                   <Row key={index}>
-                    <Col>DEV</Col>
+                    <div>Dev: </div>
                     <Col>{JSON.stringify(err)}</Col>
                   </Row>
                 ))}
@@ -41,7 +56,7 @@ const StatusModal = (props) => {
       </Modal.Body>
       <Modal.Footer>
         <Row>
-          <Col md={{ span: 2, offset: 10 }}>
+          <Col md={{ span: 2 }}>
             <Button onClick={() => closeModal()}>Fechar</Button>
           </Col>
         </Row>

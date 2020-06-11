@@ -16,8 +16,9 @@ const [appState, setAppState] = React.useState({
   <Button
     onClick={() =>
       setAppState({
+        ..._initAppState,
         status: false,
-        messages: ["Não foi possivel realizar o cadastro"],
+        messages: ["Não foi possivel realizar o cadastro."],
         errors: [
           {
             error: "Exeception on 9:35",
@@ -29,9 +30,20 @@ const [appState, setAppState] = React.useState({
   >
     Show Error Modal
   </Button>
+  <Button
+    onClick={() =>
+      setAppState({
+        ..._initAppState,
+        status: true,
+        messages: ["Cadastro realizado com sucesso."],
+      })
+    }
+  >
+    Show Successuful modal
+  </Button>
   <StatusModal
     appState={appState}
-    closeModal={() => setAppState({..._initAppState})}
+    closeModal={() => setAppState({ ..._initAppState })}
   />
 </div>;
 ```
