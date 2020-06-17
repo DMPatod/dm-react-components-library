@@ -1,6 +1,6 @@
 {
   "name": "dm-react-components-library",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "My react library full of handfull components",
   "author": "DMPatod",
   "license": "MIT",
@@ -29,6 +29,7 @@
     "react": "^16.13.1",
     "react-bootstrap": "^1.0.1",
     "react-dom": "^16.13.1",
+    "react-hook-form": "^5.7.2",
     "react-icons": "^3.10.0",
     "react-styleguidist": "^11.0.8",
     "rollup": "^2.15.0",

@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 
 const Line = (props) => {
   const { style } = props;
@@ -13,10 +12,6 @@ const Line = (props) => {
       }}
     />
   );
-};
-
-Line.propTypes = {
-  style: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
 };
 
 export default Line;
